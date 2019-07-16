@@ -1,0 +1,26 @@
+[debug] [2019-07-16T04:44:05.867Z] ----------------------------------------------------------------------
+[debug] [2019-07-16T04:44:05.869Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only hosting
+[debug] [2019-07-16T04:44:05.869Z] CLI Version:   7.1.0
+[debug] [2019-07-16T04:44:05.869Z] Platform:      darwin
+[debug] [2019-07-16T04:44:05.869Z] Node Version:  v10.16.0
+[debug] [2019-07-16T04:44:05.870Z] Time:          Mon Jul 15 2019 21:44:05 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-07-16T04:44:05.870Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-16T04:44:05.879Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-16T04:44:05.879Z] > authorizing via signed-in user
+[debug] [2019-07-16T04:44:05.879Z] [iam] checking project friendlychat-f7dc4 for permissions ["firebase.projects.get"]
+[debug] [2019-07-16T04:44:05.881Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-07-16T04:44:05.881Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-07-16T04:44:06.058Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-16T04:44:06.064Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/friendlychat-f7dc4:testIamPermissions  
+
+[debug] [2019-07-16T04:44:06.291Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-16T04:44:06.293Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/friendlychat-f7dc4  
+ 
+[debug] [2019-07-16T04:44:06.518Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-16T04:44:06.520Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/friendlychat-f7dc4/webApps/-/config  
+ 
+[debug] [2019-07-16T04:44:06.921Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: ./public
+[info] ✔  hosting: Local server: http://localhost:5000
