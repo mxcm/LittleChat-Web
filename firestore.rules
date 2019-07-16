@@ -1,0 +1,29 @@
+// Rules imported from repo.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  // Message rules:
+  //   - Anyone can read.
+  //   - Authenticated user can add and edit messages.
+  //   - Validation: check name is same as auth token and text length below 300 char or imageUrl is valid
+  //   - Deletes are not allowed
+    match /messages/{messageId} {
+      allow read;
+      allow create, update: if request.auth != null
+                    && request.resource.data.name == request.auth.token.name
+                    && (request.resource.data.text is string
+                      && request.resource.data.text.size() <= 300
+                      || request.resource.data.imageUrl is string
+                      && request.resource.data.imageUrl.matches('https?://.*'));
+      allow delete: if false;
+    }
+    
+    // FCM Tokens:
+    //   - Reading list of tokens is not allowed.
+    //   - Anyone can write their token
+    match /fcmTokens/{token} {
+    	allow read: if false;
+      allow write;
+    }
+  }
+}
