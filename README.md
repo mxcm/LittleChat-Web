@@ -11,4 +11,5 @@ LittleChat is a real time web chat app based on firebase.
 
 ## Resources
 
-* [codelab](https://codelabs.developers.google.com/codelabs/firebase-web/)
+* [codelab: firebase web](https://codelabs.developers.google.com/codelabs/firebase-web/)
+* [codelab: firebase cloud functions](https://codelabs.developers.google.com/codelabs/firebase-cloud-functions/)
